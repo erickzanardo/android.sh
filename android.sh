@@ -35,6 +35,8 @@ then
   FIRST_AVD=`$EMULATOR -list-avds | head -n 1`
   echo "Booting $FIRST_AVD"
   ($EMULATOR "@$FIRST_AVD" &)
+
+  exit 1
 fi
 
 if [ "$1" == "--avd" ]
